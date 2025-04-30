@@ -52,7 +52,7 @@ class Validador:
         self.regla = regla
 
     def es_valida(self, clave: str) -> bool:
-        return self.regla.es_valida(clave)
+        return self.regla.es_valida(clave)#
 
 
 
