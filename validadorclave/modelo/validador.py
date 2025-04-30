@@ -27,7 +27,12 @@ class ReglaValidacionGanimedes(ReglaValidacion):
 
     def contiene_caracter_especial(self, clave: str) -> bool:
         especiales = "@_#$%"
-        return any(c in especiales for c in clave)
+
+        for caracter in clave:
+            if caracter in especiales:
+                return True
+
+        return False
 
     def es_valida(self, clave: str) -> bool:
         pass
