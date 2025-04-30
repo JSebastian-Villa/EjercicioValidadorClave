@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class ReglaValidacion(ABC):
     def __init__(self, _longitud_esperada: int):
         self._longitud_esperada = _longitud_esperada
@@ -18,6 +19,19 @@ class ReglaValidacion(ABC):
     @abstractmethod
     def es_valida(self, clave: str) -> bool:
         pass
+
+    class ReglaValidacionGanimedes(ReglaValidacion):
+        def _init_(self):
+            pass
+
+        def contiene_caracter_especial(self, clave: str) -> bool:
+            pass
+
+        def es_valida(self, clave: str) -> bool:
+            pass
+
+
+
 
 
 
